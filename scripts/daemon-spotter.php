@@ -1980,6 +1980,7 @@ while ($i > 0) {
 					    $send = $MI->add($data);
 				    } elseif (isset($line['symbol']) && isset($line['latitude']) && isset($line['longitude']) && (
 					    $line['symbol'] === 'Car' || 
+					    $line['symbol'] === 'No. WX Stn' || 
 					    $line['symbol'] === 'Ambulance' || 
 					    $line['symbol'] === 'Van' || 
 					    $line['symbol'] === 'Truck' || $line['symbol'] === 'Truck (18 Wheeler)' || 
