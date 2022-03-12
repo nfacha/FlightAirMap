@@ -2014,7 +2014,7 @@ while ($i > 0) {
 					} else {
 						$Source->addLocation($data['ident'],$data['latitude'],$data['longitude'],$data['altitude'],'','',$data['source_name'],'antenna.png','gs',$id,0,$data['datetime']);
 					}
-				    } elseif (isset($line['symbol']) && $line['symbol'] === 'Weather Station') {
+				    } elseif ((isset($line['symbol']) && $line['symbol'] === 'Weather Station') || (isset($line['symbol']) && $line['symbol'] === 'National Weather Service Site'))　{
 					//if ($globalDebug) echo '!! Weather Station not yet supported'."\n";
 					if ($globalDebug) echo '# Weather Station added'."\n";
 					$Source->deleteOldLocationByType('wx');
