@@ -95,7 +95,7 @@ document.cookie =  'MapFormat=3d; expires=Thu, 2 Aug 2100 20:47:11 UTC; path=/'
 <?php
 	} elseif ($MapType == 'OpenStreetMap') {
 ?>
-	var imProv = Cesium.createOpenStreetMapImageryProvider({
+	var imProv = new Cesium.OpenStreetMapImageryProvider({
 		url : 'https://a.tile.openstreetmap.org/',
 		credit: 'Map data © OpenStreetMap contributors, ' +
 	      'Open Database Licence'
@@ -103,7 +103,7 @@ document.cookie =  'MapFormat=3d; expires=Thu, 2 Aug 2100 20:47:11 UTC; path=/'
 <?php
 	} elseif ($MapType == 'OpenSeaMap') {
 ?>
-	var imProv = Cesium.createOpenStreetMapImageryProvider({
+	var imProv = new Cesium.OpenStreetMapImageryProvider({
 		url : 'https://tiles.openseamap.org/seamark/',
 		credit: 'Map data © OpenSeaMap contributors, © OpenStreetMap contributors, ' +
 	      'Open Database Licence'
@@ -169,7 +169,7 @@ document.cookie =  'MapFormat=3d; expires=Thu, 2 Aug 2100 20:47:11 UTC; path=/'
 	}  elseif (isset($globalMapCustomLayer[$MapType])) {
 		$customid = $MapType;
 ?>
-	var imProv = Cesium.createOpenStreetMapImageryProvider({
+	var imProv = new Cesium.OpenStreetMapImageryProvider({
 		url : '<?php print $globalMapCustomLayer[$customid]['url']; ?>',
 		maximumLevel: <?php if (isset($globalMapCustomLayer[$customid]['maxZoom'])) print $globalMapCustomLayer[$customid]['maxZoom']; else print '99'; ?>,
 		minimumLevel: <?php if (isset($globalMapCustomLayer[$customid]['minZoom'])) print $globalMapCustomLayer[$customid]['minZoom']; else print '0'; ?>,
@@ -499,7 +499,7 @@ camera.setView({
 <?php
 	if (isset($globalMap3DTiles) && $globalMap3DTiles != '') {
 ?>
-var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTilesetl({
 	url: '<?php print $globalMap3DTiles; ?>'
 }));
 <?php
