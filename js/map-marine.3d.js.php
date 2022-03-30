@@ -294,7 +294,7 @@ function loadOpenSeaMap(val) {
     } else {
 	console.log('Add openseamap');
 	createCookie('openseamap',val,999);
-	openseamap = layers.addImageryProvider(Cesium.createOpenStreetMapImageryProvider({
+	openseamap = layers.addImageryProvider(new Cesium.OpenStreetMapImageryProvider({
 	    url : 'http://tiles.openseamap.org/seamark/',
 	    credit: 'Map data: &copy; <a href="http://www.openseamap.org">OpenSeaMap</a> contributors'
 	}));
