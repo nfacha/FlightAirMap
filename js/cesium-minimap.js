@@ -59,7 +59,7 @@ function CesiumMiniMap(parentViewer, options) {
         if (!_osm) {
 	    parentViewer.scene.imageryLayers.layerAdded.addEventListener(_addLayer);
 	} else {
-	    var imProvOSM = Cesium.createOpenStreetMapImageryProvider({
+	    var imProvOSM = new Cesium.OpenStreetMapImageryProvider({
 		url : 'https://a.tile.openstreetmap.org/'
 	    });
 	    miniviewer.scene.imageryLayers.addImageryProvider(imProvOSM);
