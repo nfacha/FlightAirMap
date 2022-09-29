@@ -285,7 +285,7 @@ $globalAircraftImageFetch = TRUE;
 //Check by aircraft ICAO if image is not found by registration
 $globalAircraftImageCheckICAO = TRUE;
 //Sources for Aircraft image
-$globalAircraftImageSources = array('ivaomtl','wikimedia','airportdata','deviantart','flickr','bing','jetphotos','planepictures','planespotters','customsources');
+$globalAircraftImageSources = array('jetphotos','planespotters');
 // Custom source configuration {registration} will be replaced by aircraft registration (exif get copyright from exif data for each pic)
 // example of config : $globalAircraftImageCustomSources = array('thumbnail' => 'http://pics.myurl.com/thumbnail/{registration}.jpg','original' => 'http://myurl/original/{registration}.jpg','source_website' => 'https://www.myurl.com', 'source' => 'customsite', 'copyright' => 'myself','exif' => true);
 // ************************
@@ -347,11 +347,11 @@ $globalGroundAltitude = FALSE;
 // Aircraft Mode
 $globalAircraft = TRUE;
 // Marine Mode
-$globalMarine = FALSE;
+$globalMarine = TRUE;
 // Tracker Mode
-$globalTracker = FALSE;
+$globalTracker = TRUE;
 // Satellite Mode
-$globalSatellite = FALSE;
+$globalSatellite = TRUE;
 // ************************
 
 // Enable map matching for tracker mode
